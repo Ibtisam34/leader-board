@@ -20,7 +20,7 @@
           <h2>Recent Scores  
              <i class="fas fa-trophy"></i>
           </h2>
-          <button type="button" onClick="window.location.reload()" class="btn">Refresh</button>
+          <button type="button" id="refreshbtn"class="btn">Refresh</button>
           </div>
           <div class="scores-board">
           <ul id="scores" >
@@ -28,7 +28,7 @@
            </div>
            </div>
           <h3>Add your score</h3>
-          <form action="https://us-central1-js-capstone-backend.cloudfunctions.net/api/ " id="form">
+          <form action="https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/" id="form">
               <div class="form-control">
               <input class="input" type="text" id="name" placeholder="your name">
               <input class="input" type="text" id="score" placeholder="your score">
