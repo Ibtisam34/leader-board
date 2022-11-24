@@ -5,7 +5,9 @@ body {
   font: 15px/1.5 Arial, Helvetica, sans-serif;
   padding: 0;
   margin: 0;
-  background-color: #c4b5b5;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgb(89, 165, 189);
   font-family: "Roboto", sans-serif;
   list-style: none;
 }
@@ -19,7 +21,7 @@ body {
 
 form {
   float: right;
-  margin-right: 20%;
+  margin-right: 2%;
 }
 
 h1 {
@@ -27,15 +29,34 @@ h1 {
   font-weight: bold;
   color: grey;
   text-align: center;
+  margin-top: 5%;
 }
 
 h2 {
-  color: rgb(134, 59, 45);
+  color: rgb(19, 20, 20);
+  border-top-color: rgb(0, 255, 21);
+  border-top-style: groove;
+  border-bottom-style: groove;
+  text-align: center;
+}
+
+h2 i {
+  color: rgb(214, 39, 200);
 }
 
 h3 {
-  margin-left: 66%;
-  color: rgb(27, 75, 75);
+  margin-left: 77%;
+  text-align: center;
+  border-radius: 50px;
+  border-bottom-style: double;
+  border-bottom-color: rgb(39, 212, 212);
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(48, 240, 89);
+}
+
+.h3-span {
+  color: #01a738;
 }
 
 .highlight {
@@ -52,7 +73,7 @@ button {
   padding-top: 5px;
   padding-bottom: 5px;
   margin-top: 19px;
-  box-shadow: rgba(0, 0, 0, 0.2) 0 20px 30px;
+  box-shadow: 4px 1px #67a701;
   border: none;
   color: white;
   text-align: center;
@@ -75,7 +96,10 @@ button:focus {
 
 .input {
   margin-top: 10px;
-  border-color: #008cba;
+  border-color: #558494;
+  border-style: double;
+  border-radius: 5px;
+  box-shadow: 4px 5px #3f5547;
 }
 
 .form-control {
@@ -98,20 +122,21 @@ button:focus {
 
 ul {
   border: solid;
-  border-color: rgba(26, 146, 182, 0.533);
+  border-right-color: red;
+  border-right-style: groove;
   border-width: 7px;
   margin-block-start: 0;
   margin-block-end: 0;
   padding-inline-start: 2px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0 18px 36px -18px inset;
+  box-shadow: rgba(235, 14, 187, 0.25) 0 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0 18px 36px -18px inset;
 }
 
 ul li {
   list-style: none;
   padding-left: 2%;
   line-height: 20px;
-  box-shadow: rgba(60, 64, 67, 0.3) 0 1px 2px 0, rgba(60, 64, 67, 0.15) 0 1px 3px 1px;
-  color: rgb(10, 1, 1);
+  box-shadow: rgba(19, 216, 36, 0.3) 0 1px 2px 0, rgba(60, 64, 67, 0.15) 0 1px 3px 1px;
+  color: rgb(207, 6, 16);
 }
 
 .submit {
