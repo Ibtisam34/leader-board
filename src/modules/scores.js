@@ -21,7 +21,7 @@ export const renderScores = (allMembers) => {
 };
 export default renderScores;
 
-//get Api
+// get Api
 export const postForm = async () => {
   const response = fetch(gameURL, {
     method: 'POST',
