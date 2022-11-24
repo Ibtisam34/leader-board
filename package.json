@@ -27,6 +27,9 @@
   "version": "1.0.0",
   "description": "My webpack project",
   "name": "my-webpack-project",
+  "repository": {
+    "url": "https://github.com/Ibtisam34/leader-board.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --open",
