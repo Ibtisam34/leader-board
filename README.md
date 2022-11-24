@@ -2,7 +2,7 @@
   # live demo
  [live](https://ibtisam34.github.io/leader-board/)
 
-n this project, I built a simple HTML Leaderboard . I built it using HTML, CSS, JavaScript,EcmaScript6 modules webpack and served it by a webpack dev server.
+In this project, I built a simple HTML Leaderboard . I built it using HTML, CSS, JavaScript,EcmaScript6 modules webpack and served it by a webpack dev server.
 
 
 Template for Leaderboard setup
@@ -24,7 +24,7 @@ Setting up this project locally
 How should it be tested
 Clone the repository
 
- git clone https://github.com/Ibtisam34/To-do-list.git
+ git clone https://github.com/Ibtisam34/leader-board.git
 Navigate to the folder
 
 🎉Congratulations you're done✨
