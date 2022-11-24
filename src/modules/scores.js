@@ -1,59 +1,52 @@
-export const array = [
-  {
-    name: 'Riyana',
-    score: 100,
-  },
+// Declaring and Initializing global variables
+const userName = document.querySelector('#name');
+const userScore = document.querySelector('#score');
+const gameForm = document.querySelector('#form');
+const refreshBtn = document.querySelector('#refreshbtn');
+const gameURL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/eb3tufSC8mHnDPCqR6T5/scores/';
+const element = document.querySelector('#scores');
 
-  {
-    name: 'Anwar',
-    score: 68,
-  },
-
-  {
-    name: 'Omar',
-    score: 59,
-  },
-
-  {
-    name: 'Aaha',
-    score: 60,
-  },
-
-  {
-    name: 'Faiza',
-    score: 89,
-  },
-
-  {
-    name: 'Farhan',
-    score: 100,
-  },
-  {
-    name: 'kaka',
-    score: 60,
-  },
-  {
-    name: 'bhelo',
-    score: 50,
-  },
-  {
-    name: 'pius',
-    score: 99,
-  },
-];
-
-const element = document.createElement('li');
-export const render = () => {
-  array.forEach((a, index) => {
+// Function for Rendering items
+export const renderScores = (allMembers) => {
+  element.innerHTML = '';
+  const allUsers = (allMembers.result);
+  allUsers.forEach((user, index) => {
     element.innerHTML += `
-    <li class='litem ${index % 2 !== 0 ? 'item' : 'item1'}' >
-      <label class='lname'> ${a.name} : </label> 
-      <label class='lscore'> ${a.score} </label>
-    </li>
+      <li class='litem ${index % 2 !== 0 ? 'item' : 'item1'}' >
+        <label class='lname'> ${user.user} : </label> 
+        <label class='lscore'> ${user.score} </label>
+      </li>
     `;
   });
 };
-window.onload = () => {
-  render();
-  document.querySelector('#scores').appendChild(element);
+export default renderScores;
+
+// Function to Fetch From API
+export const postForm = async () => {
+  const response = fetch(gameURL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      user: userName.value,
+      score: userScore.value,
+    }),
+  });
+  const data = await (await response).json();
+  userName.value = '';
+  userScore.value = '';
+  return data;
 };
+
+gameForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  postForm();
+});
+
+// Function to FetchScores From
+export const fetchScores = async () => {
+  const response = await fetch(gameURL);
+  const data = await response.json();
+  renderScores(data);
+};
+
+refreshBtn.addEventListener('click', fetchScores);
