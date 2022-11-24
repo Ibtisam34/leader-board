@@ -21,7 +21,7 @@ export const renderScores = (allMembers) => {
 };
 export default renderScores;
 
-// Function to Fetch From API
+//get Api
 export const postForm = async () => {
   const response = fetch(gameURL, {
     method: 'POST',
@@ -42,7 +42,7 @@ gameForm.addEventListener('submit', (e) => {
   postForm();
 });
 
-// Function to FetchScores From
+// Function to FetchScores From Api
 export const fetchScores = async () => {
   const response = await fetch(gameURL);
   const data = await response.json();
